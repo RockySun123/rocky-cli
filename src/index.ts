@@ -2,6 +2,7 @@ import { Command } from 'commander'
 import { version } from '../package.json'
 import { create } from './command/create'
 import { update } from './command/update'
+import { exitListerner } from './utils/exitListener'
 
 
 const program = new Command()
@@ -25,5 +26,6 @@ program.command('update')
     .action(async () => {
         await update()
     })
-
 program.parse() // 解析
+
+exitListerner() //监听退出,防止抱错
