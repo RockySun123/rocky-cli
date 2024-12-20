@@ -3,6 +3,9 @@ import { input, select } from '@inquirer/prompts'
 import { clone } from '../utils/clone'
 import path from 'path'
 import fs from 'fs-extra'
+import { name, version } from '../../package.json'
+import { isOverwrite } from '../utils/isOverwrite'
+import { checkVersion } from '../utils/checkVersion'
 //项目模版
 export interface TemplateInfo {
     name: string;//模版名称
@@ -26,19 +29,20 @@ export const templates: Map<string, TemplateInfo> = new Map([
         branch: 'dev-rocky'
     }]
 ])
-export const isOverwrite = async (projectName: string) => {
-    console.warn(`${projectName} 文件夹已存在`)
-    return select({
-        message: '是否覆盖',
-        choices: [{
-            name: '覆盖',
-            value: true
-        }, {
-            name: '取消',
-            value: false
-        }]
-    })
-}
+
+// export const isOverwrite = async (projectName: string) => {
+//     console.warn(`${projectName} 文件夹已存在`)
+//     return select({
+//         message: '是否覆盖',
+//         choices: [{
+//             name: '覆盖',
+//             value: true
+//         }, {
+//             name: '取消',
+//             value: false
+//         }]
+//     })
+// }
 //创建
 export async function create(projectName?: string) {
     // console.log('创建项目名称: ', projectName)
@@ -68,6 +72,8 @@ export async function create(projectName?: string) {
             return//取消，不做任何处理
         }
     }
+    //检测版本更新
+    await checkVersion(name, version)
 
     //获取响应的模版，选择模版
     const templateName = await select({

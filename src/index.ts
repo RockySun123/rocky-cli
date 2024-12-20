@@ -1,6 +1,9 @@
 import { Command } from 'commander'
 import { version } from '../package.json'
 import { create } from './command/create.js'
+
+
+
 const program = new Command()
 
 program.name('rocky') //注册脚手架名称
