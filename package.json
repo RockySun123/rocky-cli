@@ -1,7 +1,7 @@
 {
-  "name": "rocky-cli",
+  "name": "rockys-cli",
   "version": "0.0.1",
-  "description": "rocky-cli 脚手架",
+  "description": "rockys-cli 脚手架",
   "keywords": [
     "Vite",
     "Vue3",
@@ -9,7 +9,7 @@
     "Element-plus"
   ],
   "bin": {
-    "rocky": "bin/index.js"
+    "rockys": "bin/index.js"
   },
   "files": [
     "dist",

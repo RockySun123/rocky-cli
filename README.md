@@ -1,6 +1,6 @@
-# rocky-cli
+# rockys-cli
 
-![Npm 版本](https://img.shields.io/badge/rocky-cli_v0.0.1-green)
+![Npm 版本](https://img.shields.io/badge/rockys-cli_v0.0.1-green)
 
 ## 📖 简介
 
@@ -13,19 +13,19 @@
 ## 🎁 安装
 
 ```bash
-npm install rocky-cli -g
+npm install rockys-cli -g
 ```
 
 ## 🚴 使用
 
 ```bash
 # 使用模版创建新项目
-rocky create
+rockys create
 
 # 执行项目文件夹名称病选择模版创建新项目
-rocky create [projectName]
+rockys create [projectName]
 
 # 查看脚手架版本
-rocky -v
-rocky --version
+rockys -v
+rockys --version
 ```
