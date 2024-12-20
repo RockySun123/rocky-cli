@@ -1,6 +1,6 @@
 # rockys-cli
 
-![Npm 版本](https://img.shields.io/badge/rockys-cli_v0.1.1-green)
+![Npm 版本](https://img.shields.io/badge/rockys-cli_v0.1.2-green)
 
 ## 📖 简介
 
