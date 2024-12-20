@@ -3,6 +3,9 @@ import type { SimpleGitOptions } from 'simple-git'
 import createLogger from 'progress-estimator'
 import chalk from 'chalk'
 // import { execSync } from 'child_process';
+import log from './log'
+import { figletPrint } from './figletPrint'
+
 
 //初始化进度条
 const logger = createLogger({
@@ -31,19 +34,22 @@ export const clone = async (url: string, projectName: string, options: string[])
             //展示预计下载时间
             estimate: 7000
         })
+
+        await figletPrint()
+
         console.log('')
         console.log(chalk.blueBright('============================'))
         console.log(chalk.blueBright('= 欢迎使用 rocky-cli脚手架 ='))
         console.log(chalk.blueBright('============================'))
         console.log('')
-        console.log(chalk.blackBright('项目创建成功'), chalk.blueBright(projectName))
-        console.log(chalk.blackBright('请按照以下步骤进行操作:'))
-        console.log(chalk.blackBright('cd ', chalk.blueBright(projectName)))
-        console.log(chalk.yellowBright('pnpm ', chalk.blackBright('install')))
-        console.log(chalk.yellowBright('pnpm ', chalk.blackBright('run dev')))
+        log.success(chalk.blackBright('项目创建成功') + ' ' + chalk.blueBright(projectName))
+        log.success(chalk.blackBright('请按照以下步骤进行操作:'))
+        log.info(chalk.blackBright('cd ', chalk.blueBright(projectName)))
+        log.info(chalk.yellow('pnpm ', chalk.blackBright('install')))
+        log.info(chalk.yellow('pnpm ', chalk.blackBright('run dev')))
 
     } catch (error) {
-        console.error(chalk.red('下载失败'))
+        log.error(chalk.red('下载失败'))
         console.log(error)
     }
 }
