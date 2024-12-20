@@ -8,7 +8,7 @@
 
 ## 📕 模版
 
-- 快速生成 Vue3 + Vite + Typescript + Pinia + Axios + Mock + Element-plus 模版
+- 快速生成 [Vue3 + Vite + Typescript + Pinia + Axios + Mock + Element-plus](https://gitee.com/sun-kelin/vue-infrastructure) 模版
 
 ## 🎁 安装
 
