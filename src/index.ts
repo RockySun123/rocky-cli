@@ -1,7 +1,7 @@
 import { Command } from 'commander'
 import { version } from '../package.json'
-import { create } from './command/create.js'
-
+import { create } from './command/create'
+import { update } from './command/update'
 
 
 const program = new Command()
@@ -17,6 +17,13 @@ program.command('create')
     .action(async function (dirName) { //dirName 创建目录
         //创建项目
         create(dirName)
+    })
+
+//新建update 命令，并对此命令创建描述，以及执行函数
+program.command('update')
+    .description('更新脚手架')
+    .action(async () => {
+        await update()
     })
 
 program.parse() // 解析

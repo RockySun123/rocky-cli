@@ -28,6 +28,7 @@
     "commander": "^9.0.0",
     "fs-extra": "^11.2.0",
     "lodash": "^4.17.21",
+    "ora": "5.4.1",
     "progress-estimator": "^0.3.1",
     "simple-git": "^3.27.0",
     "tslib": "^2.8.1"
