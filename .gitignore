@@ -1,3 +1,4 @@
 node_modules
 脚手架开发.md
 pnpm-lock.yaml
+./dist
