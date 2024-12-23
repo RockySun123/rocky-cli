@@ -1,6 +1,6 @@
 # rockys-cli
 
-![Npm 版本](https://img.shields.io/badge/rockys-cli_v0.1.3-green)
+![Npm 版本](https://img.shields.io/badge/rockys-cli_v0.2.0-green)
 
 ## 📖 简介
 
@@ -9,6 +9,8 @@
 ## 📕 模版
 
 - 快速生成 [Vue3 + Vite + Typescript + Pinia + Axios + Mock + Element-plus](https://gitee.com/sun-kelin/vue-infrastructure) 模版
+
+- 快速生成 [Vue3 + Vite + Typescript + Pinia + Axios + Mock + Vant](https://gitee.com/sun-kelin/vue-infrastructure) H5 模版
 
 ## 🎁 安装
 
