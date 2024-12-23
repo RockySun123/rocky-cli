@@ -23,26 +23,20 @@ export const templates: Map<string, TemplateInfo> = new Map([
         branch: 'master'
     }],
     ['vite-template', {
-        name: 'vite-react-typescript-template',
+        name: 'vite-vue3-typescript-template',
         downloadUrl: 'git@gitee.com:sun-kelin/vue-infrastructure.git',
         description: 'Vue 技术栈开发模版',
         branch: 'dev-rocky'
+    }],
+    ['vite-vue3-Vant-typescript-h5-template', {
+        name: 'vite-vue3-Vant-typescript-h5-template',
+        downloadUrl: 'git@gitee.com:sun-kelin/vue-infrastructure.git',
+        description: 'Vue H5 技术栈开发模版',
+        branch: 'h5'
     }]
 ])
 
-// export const isOverwrite = async (projectName: string) => {
-//     console.warn(`${projectName} 文件夹已存在`)
-//     return select({
-//         message: '是否覆盖',
-//         choices: [{
-//             name: '覆盖',
-//             value: true
-//         }, {
-//             name: '取消',
-//             value: false
-//         }]
-//     })
-// }
+
 //创建
 export async function create(projectName?: string) {
     // console.log('创建项目名称: ', projectName)
